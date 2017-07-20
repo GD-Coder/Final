@@ -1,0 +1,203 @@
+.mainview {
+  flex: 4;
+  min-height: 20px;
+  min-width: 100px;
+  background-color: lightblue;
+
+}
+.subview {
+  width: 75%;
+  height: 75%;
+}
+
+.container {
+  display: flex;
+  height:100%;
+
+}
+
+.header {
+  align-items: center;
+  align-content: center;
+}
+
+.menu {
+background-color: lightgray;
+}
+
+.listitem {
+  display: flex;
+  list-style-type: none;
+  padding:0;
+  line-height: .5em;
+  margin:0;
+  height:0px;
+  font-size: 16px;
+}
+
+.fullscreen
+{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.icon
+{
+  font-size: 30px;
+}
+
+.bigger-icon
+{
+  font-size: 36px;
+}
+
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.fullscreen {
+  display: flex;
+  flex-direction: column;
+  background-color: #52958B;
+}
+
+.topmenu {
+  flex: 1;
+}
+
+.sidemenu {
+  flex: 1;
+  min-height: 20px;
+  background-color: lightgreen;
+}
+
+.mainview {
+  display: flex;
+  flex: 4;
+  min-height: 20px;
+  min-width: 100px;
+  background-color: lightblue;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.logo {
+    background-image: url(ftd.png);
+    width: 139px;
+    height: 148px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+.container {
+  display: flex;
+  flex: 6;
+
+}
+body {
+  background-image: url('bg2.jpg');
+}
+.header {
+  align-items: center;
+  align-content: center;
+}
+md-ink-bar {
+    color: rgb(13, 242, 255) !important;
+    background: rgb(13, 242, 255) !important;
+    height: 5px !important;
+}
+md-ink-bar {
+    color: rgb(255,64,129);
+    background: rgb(255,64,129);
+}
+.tabsdemoDynamicHeight md-content {
+  background-color: transparent !important; }
+  .tabsdemoDynamicHeight md-content md-tabs {
+    background: cornflowerblue;
+    border: 1px solid #e1e1e1; }
+    .tabsdemoDynamicHeight md-content md-tabs md-tabs-wrapper {
+      background: white; }
+  .tabsdemoDynamicHeight md-content h1:first-child {
+    margin-top: 0; }
+.profile,
+.credentials {
+  display: flex;
+  align-items: stretch;
+}
+.md-tab.md-active {
+  color: white !important;
+}
+.md-tab {
+    color: rgba(241, 234, 234, 0.54) !important;
+}
+md-tabs-canvas {
+    color: white;
+    background-color: black;
+    /*background-image: url(bg12.jpg);*/
+}
+.credentials {
+  flex: 1;
+}
+.buttondemoBasicUsage section {
+  background: #f7f7f7;
+  border-radius: 3px;
+  text-align: center;
+  margin: 1em;
+  position: relative !important;
+  padding-bottom: 10px; }
+
+.buttondemoBasicUsage md-content {
+  margin-right: 7px; }
+
+.buttondemoBasicUsage section .md-button {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.buttondemoBasicUsage .label {
+  position: absolute;
+  bottom: 5px;
+  left: 7px;
+  font-size: 14px;
+  opacity: 0.54; }
+.whiteframedemoBasicClassUsage {
+  /* For breakpoint `-xs` */
+  /* For breakpoint `-sm` */
+  /* For breakpoint `-md` */
+  /* For breakpoint `-gt-md` */ }
+  .whiteframedemoBasicClassUsage md-whiteframe {
+    background: #fff;
+    margin: 30px;
+    height: 100px; }
+  @media (max-width: 599px) {
+    .whiteframedemoBasicClassUsage md-whiteframe {
+      margin: 7px;
+      height: 50px;
+      background-color: #c8e4fa; }
+    .whiteframedemoBasicClassUsage md-whiteframe > span {
+      font-size: 0.4em; } }
+  @media (min-width: 600px) and (max-width: 959px) {
+    .whiteframedemoBasicClassUsage md-whiteframe {
+      margin: 20px;
+      height: 75px; }
+    .whiteframedemoBasicClassUsage md-whiteframe > span {
+      font-size: 0.6em; } }
+  @media (min-width: 960px) and (max-width: 1279px) {
+    .whiteframedemoBasicClassUsage md-whiteframe {
+      margin: 20px;
+      height: 90px;
+      background-color: #fcddde; }
+    .whiteframedemoBasicClassUsage md-whiteframe > span {
+      font-size: 0.9em; } }
+  @media (min-width: 1280px) {
+    .whiteframedemoBasicClassUsage md-whiteframe {
+      margin: 25px;
+      height: 100px;
+      background-color: #F2FCE2; }
+    .whiteframedemoBasicClassUsage md-whiteframe > span {
+      font-size: 1.0em; } }

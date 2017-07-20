@@ -1,0 +1,63 @@
+<div class="logo"></div>
+<md-button md-no-ink class="md-primary" ng-click="$sideCtrl.logout()">Logout</md-button>
+<div layout="row" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>
+<md-whiteframe ng-repeat="item in $sideCtrl.listdata" class="md-whiteframe-4dp" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center">
+    <span>{{item.origin}} to {{item.destination}}</span>
+  </md-whiteframe>
+
+</div>
+<span ng-show="$sideCtrl.loggedIn()">Search Here:   </span>
+<md-content>
+  <md-input-container class="searchbox-search md-primary" ng-show="$sideCtrl.loggedIn()">
+    <label class='searchbox-label'>Origin</label>
+    <input class='searchbox-searchfield' type="text" ng-model="origin"/>
+  </md-input-container>
+  <md-input-container class="searchbox-search md-primary" ng-show="$sideCtrl.loggedIn()">
+    <label class='searchbox-label'>Destination</label>
+    <input class='searchbox-searchfield' type="text" ng-model="destination"/>
+  </md-input-container>
+  </md-content>
+  <md-button md-no-ink class="md-primary" ng-show="$sideCtrl.loggedIn()" ng-click="$sideCtrl.searchFlights(origin, destination); $sideCtrl.searchToggle()">Search</md-button>
+  <md-button md-no-ink class="md-primary" ng-click="$sideCtrl.backClick()">Back</md-button>
+
+<md-content class="menu sidemenu md-primary">
+    <div layout="column" class="searchbox-list">
+
+      <md-grid-list ng-show="$sideCtrl.showItinerary === false"
+          md-cols-gt-md="1" md-cols="1" md-cols-md="1"
+          md-row-height-gt-md="14:1" md-row-height="14:1"
+          md-gutter-gt-md="0px" md-gutter-md="0px" md-gutter="0px">
+        <md-grid-tile
+              ng-repeat="item in $sideCtrl.listdata"
+              ng-style="{}"
+
+              md-colspan='1'
+              class="searchbox-nocursor">
+            <p>{{item.origin}} to {{item.destination}}</p>
+          </md-grid-tile>
+          <md-grid-tile>
+              <md-button class="button2" ng-show="$sideCtrl.search" ng-click='$sideCtrl.bookItinerary()'>Book Itinerary</md-button>
+              <md-button class="button2" ng-show="$sideCtrl.search" ng-click='$sideCtrl.getItinerary()'>Get Itinerary</md-button>
+              <md-button class="button2" ng-show="$sideCtrl.search" ng-click="$sideCtrl.backClick()">Close Iteneraries</md-button>
+  			</md-grid-tile>
+        </md-grid-list>
+        <md-grid-list ng-show="$sideCtrl.showItinerary === true"
+            md-cols-gt-md="1" md-cols="1" md-cols-md="1"
+            md-row-height-gt-md="14:1" md-row-height="14:1"
+            md-gutter-gt-md="0px" md-gutter-md="0px" md-gutter="0px">
+            <md-grid-tile
+                  ng-repeat="item in $sideCtrl.listdata"
+                  ng-style="{}"
+
+                  md-colspan='1'
+                  class="searchbox-nocursor">
+                <p>{{item.origin}} to {{item.destination}}</p>
+                <p>Total Layover: {{item.layover}}</p>
+                <p>Total Flight Time:{{item.flightTime}}</p>
+              </md-grid-tile>
+              <md-grid-tile>
+
+              </md-grid-tile>
+            </md-grid-list>
+      </div>
+</md-content>

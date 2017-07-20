@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="src/app/app.component.css">
+ <div ng-cloak>
+   <md-content>
+     <md-tabs md-dynamic-height md-border-bottom md-selected="myTabIndex">
+       <md-tab label="Login  ">
+         <md-content class="md-padding">
+           <h1 class="md-display-2">Welcome, Please Login</h1>
+           <p>After logging in proceed to the "Flights" tab at the top to perform searches, book flights and check iteneraries.</p>
+           <login></login>
+         </md-content>
+       </md-tab>
+       <md-tab label="Flights">
+         <md-content class="md-padding">
+           <h1 class="md-display-2">Flights</h1>
+           <sidemenu></sidemenu>
+         </md-content>
+       </md-tab>
+       <md-tab label="Map   ">
+         <md-content class="md-padding">
+           <h1 class="md-display-2">Flight Map</h1>
+           <flight-map class="subview"></flight-map>
+           </md-content>
+       </md-tab>
+     </md-tabs>
+   </md-content>
+ </div>

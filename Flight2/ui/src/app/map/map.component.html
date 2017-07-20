@@ -1,0 +1,18 @@
+<div class="logo"></div>
+<div style="margin-top: 80px;"map-lazy-load="https://maps.google.com/maps/api/js">
+	<ng-map center="{{$mapCtrl.center}}" zoom="{{$mapCtrl.zoom}}">
+	  <marker
+	    ng-repeat="$mapMarker in $mapCtrl.markers"
+	    position="{{$mapMarker.position}}">
+	  </marker>
+	  <shape
+	    ng-repeat="$mapPath in $mapCtrl.paths"
+	    name="polyline"
+	    path="{{$mapPath.path}}"
+	    stroke-color="{{$mapPath.strokeColor}}"
+	    stroke-opacity="{{$mapPath.strokeOpacity}}"
+	    stroke-weight="{{$mapPath.strokeWeight}}"
+	    geodesic="{{$mapPath.geodesic}}">
+	  </shape>
+</ng-map>
+</div>
